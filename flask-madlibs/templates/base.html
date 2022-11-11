@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
+    <title>{% block title %}HOME{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <h1>MADLIB</h1>
+        <div class="container">
+            <form action="/stories"> 
+                <div class="input">
+                    <label for="place">Place: 
+                        <input type="text" name="place" id="">
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="noun">Noun: 
+                        <input type="text" name="noun" id="">
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="verb">Verb: 
+                        <input type="text" name="verb" id="">
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="adjective">Adjective: 
+                        <input type="text" name="adjective" id="">
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="plural_noun">Plural_noun: 
+                        <input type="text" name="plural_noun" id="">
+                    </label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        {% endblock %}
+    
+</body>
+</html>
