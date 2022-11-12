@@ -1,0 +1,28 @@
+{%extends "base.html" %}
+{% block title %}Questions{% endblock %}
+
+{% block content %}
+
+<h1>Questions</h1>
+
+<div class="questions">
+    <div class="question">
+        <!-- pass the questions in and loop over them -->
+    </div>
+
+
+    <form action="/questions" method="POST">
+        <label for="choices">
+            {% for question in questions %}
+            {{question}}
+            <input type="radio" name="choices" id="Yes">
+            <input type="radio" name="choices" id="No">
+            {% endfor %}
+        </label>
+            <button>Next</button>
+    </form>
+</div>
+
+{%endblock%}
+
+
