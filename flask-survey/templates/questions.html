@@ -7,16 +7,13 @@
 
 <div class="questions">
     <div class="question">
-        <!-- pass the questions in and loop over them -->
+       {{question.question}}
     </div>
-
-
-    <form action="/questions" method="POST">
+    <form action="/answer" method="POST">
         <label for="choices">
-            {% for question in questions %}
-            {{question}}
-            <input type="radio" name="choices" id="Yes">
-            <input type="radio" name="choices" id="No">
+            {% for choice in question.choices %}
+            <input type="radio" name="answer" value="{{ choice }}">
+            {{choice}}
             {% endfor %}
         </label>
             <button>Next</button>
